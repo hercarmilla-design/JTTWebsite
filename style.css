@@ -633,7 +633,7 @@ footer {
 }
 
 
-@media (max-width: 576px) {
+
     .navbar {
         padding: 15px 10px;
     }
@@ -697,7 +697,7 @@ footer {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+
   .menu-toggle {
     display: block;
   }
@@ -705,6 +705,7 @@ footer {
     position: absolute;
   }
 }
+
 
 
 
