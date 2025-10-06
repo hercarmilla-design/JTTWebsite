@@ -255,19 +255,21 @@
     <script>
 
         
+<script>
 const navLinksAll = document.querySelectorAll('.nav-links a');
+const navLinks = document.querySelector('.nav-links');
+const menuToggle = document.querySelector('.menu-toggle');
 
 navLinksAll.forEach(link => {
   link.addEventListener('click', () => {
-    navLinksAll.forEach(l => l.classList.remove('active')); 
-    link.classList.add('active'); 
- 
-       
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+    // move underline
+    navLinksAll.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+    // close menu on mobile
+    navLinks.classList.remove('active');
+
+
 
         document.addEventListener('DOMContentLoaded', () => {
             
@@ -347,6 +349,7 @@ menuToggle.addEventListener('click', () => {
 </body>
 
 </html>
+
 
 
 
