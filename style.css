@@ -42,9 +42,9 @@
  * =====================================
  */
 :root {
-    --color-primary: #007bff; 
-    --color-secondary: #28a745; 
-    --color-dark: #343a40;
+    --color-primary: #2e3a47;
+    --color-secondary: #404ecf;
+    --color-dark: #10161b;
     --color-light: #f8f9fa;
     --color-text-light: #ffffff;
     --color-text-dark: #333;
@@ -672,3 +672,4 @@ footer {
     }
 
 }
+
