@@ -26,7 +26,7 @@
 
     <section id="home" class="hero-section">
         <div class="carousel-container">
-            
+            <!-- Slide 1 -->
         <div class="carousel-slide active">
     <img src="imgs\553583343_1537164564311901_4213418605729076097_n.png" alt="JaxTrail Technologies Services" class="slide-image">
     <div class="slide-overlay"></div>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             
-            
+            <!-- Slide 2 -->
             <div class="carousel-slide">
                 <img src="imgs\553594971_2179765835841214_2243412961524534459_n.png" alt="Tech Repairs" class="slide-image">
                 <div class="slide-overlay"></div>
@@ -55,7 +55,7 @@
                         <i class="fas fa-tools" style="font-size: 3rem; color: var(--color-primary);"></i>
                     </div>
                     <h2 class="title">Expert Repairs</h2>
-                    <p class="subtitle">Professional and Quality repair services for all your devices.</p>
+                    <p class="subtitle">Professional repair services for all your devices.</p>
                     <div class="hours">
                         <p>OPEN: WEEKDAYS 12PM-5PM | WEEKENDS 8AM-10AM</p>
                     </div>
@@ -66,7 +66,7 @@
                 </div>
             </div>
             
-          
+            <!-- Slide 3 -->
             <div class="carousel-slide">
                 <img src="imgs\553132608_1749816089000893_8886982879049755005_n.png" alt="Quality Service" class="slide-image">
                 <div class="slide-overlay"></div>
@@ -74,7 +74,7 @@
                     <div class="company-icon-placeholder">
                         <i class="fas fa-shield-alt" style="font-size: 3rem; color: var(--color-primary);"></i>
                     </div>
-                    <h2 class="title">Transparency Guaranteed</h2>
+                    <h2 class="title">Quality Guaranteed</h2>
                     <p class="subtitle">No Fix, No Pay Policy with 1-Year Warranty.</p>
                     <div class="hours">
                         <p>OPEN: WEEKDAYS 12PM-5PM | WEEKENDS 8AM-10AM</p>
@@ -87,7 +87,7 @@
             </div>
         </div>
         
-       
+        <!-- Carousel Navigation Dots -->
         <div class="carousel-dots">
             <span class="dot active" data-slide="0"></span>
             <span class="dot" data-slide="1"></span>
@@ -175,7 +175,7 @@
                     <div class="testimonial-photo">
                         <img src="imgs\testi2.png" alt="Completed Laptop Screen Repair">
                     </div>
-                    <div class="stars">★★★★☆</div>
+                    <div class="stars">★★★★★</div>
                     <p class="review-text">
                         "PisoWifi with inclusions"
                     </p>
@@ -195,7 +195,7 @@
                     <div class="testimonial-photo">
                         <img src="imgs\testi4.png" alt="Completed Laptop Screen Repair">
                     </div>
-                    <div class="stars">★★★★☆</div>
+                    <div class="stars">★★★★★</div>
                     <p class="review-text">
                         "School network setup"
                     </p>
@@ -235,7 +235,7 @@
                     <p>+63 994 891 6507</p>
                 </div>
                 <div>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jaxtrailtech@gmail.com&su=Service%20Inquiry&body=Hello%20JaxTrail%20Technologies," target="_blank" class="contact-link">
+                    <a href="mailto:jaxtrailtech@gmail.com" class="contact-link">
                         <i class="fas fa-envelope contact-icon"></i>
                         <h4>EMAIL</h4>
                         <p>jaxtrailtech@gmail.com</p>
@@ -252,36 +252,19 @@
         </div>
     </footer>
     
-
-        
-<script>
-const navLinksAll = document.querySelectorAll('.nav-links a');
-const navLinks = document.querySelector('.nav-links');
-const menuToggle = document.querySelector('.menu-toggle');
-
-navLinksAll.forEach(link => {
-  link.addEventListener('click', () => {
-    // move underline
-    navLinksAll.forEach(l => l.classList.remove('active'));
-    link.classList.add('active');
-
-    // close menu on mobile
-    navLinks.classList.remove('active');
-
-
-
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
-            
+            // Hero Carousel Handler
             const heroSlides = document.querySelectorAll('.carousel-slide');
             const heroDots = document.querySelectorAll('.carousel-dots .dot');
             let currentHeroSlide = 0;
             
             function showHeroSlide(index) {
-               
+                // Hide all slides
                 heroSlides.forEach(slide => slide.classList.remove('active'));
                 heroDots.forEach(dot => dot.classList.remove('active'));
                 
-               
+                // Show current slide
                 heroSlides[index].classList.add('active');
                 heroDots[index].classList.add('active');
                 
@@ -293,20 +276,20 @@ navLinksAll.forEach(link => {
                 showHeroSlide(nextIndex);
             }
             
-            
+            // Auto-advance hero carousel every 5 seconds
             setInterval(nextHeroSlide, 5000);
             
-           
+            // Dot navigation for hero carousel
             heroDots.forEach((dot, index) => {
                 dot.addEventListener('click', () => {
                     showHeroSlide(index);
                 });
             });
             
-            
+            // Show the initial slide
             showHeroSlide(currentHeroSlide);
             
-            
+            // Basic Scroll Reveal Handler
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -316,7 +299,7 @@ navLinksAll.forEach(link => {
             }, { threshold: 0.1 });
             document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
             
-           
+            // Testimonial Carousel Handler
             const testimonialSlides = document.querySelectorAll('.testimonial-slide');
             const nextButton = document.querySelector('.carousel-button.next');
             const prevButton = document.querySelector('.carousel-button.prev');
@@ -341,19 +324,9 @@ navLinksAll.forEach(link => {
                 showTestimonialSlide(currentTestimonialSlide);
             });
             
-            
+            // Show the initial slide
             showTestimonialSlide(currentTestimonialSlide);
         });
     </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
