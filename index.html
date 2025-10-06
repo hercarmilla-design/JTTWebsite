@@ -7,6 +7,8 @@
     <link rel="icon" type="image/png" href="imgs\image-removebg-preview (1).png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
 
@@ -14,6 +16,8 @@
         <div class="container navbar">
             <h1 class="logo">JaxTrail Technologies</h1>
             <nav class="nav-links">
+                <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-moon"></i></button>
                 <a href="#home" class="active">Home</a>
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
@@ -213,6 +217,7 @@
 
                 <button class="carousel-button prev">❮</button>
                 <button class="carousel-button next">❯</button>
+                
             </div>
         </div>
     </section>
@@ -263,6 +268,20 @@ navLinksAll.forEach(link => {
     link.classList.add('active'); // add active to clicked one
   });
 });
+
+
+  const toggle = document.getElementById('theme-toggle');
+  const icon = toggle.querySelector('i');
+
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+      icon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+      icon.classList.replace('fa-sun', 'fa-moon');
+    }
+  });
+
 
 
 const menuToggle = document.querySelector('.menu-toggle');
@@ -351,4 +370,3 @@ menuToggle.addEventListener('click', () => {
     </script>
 </body>
 </html>
-
