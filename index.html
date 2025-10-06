@@ -26,7 +26,7 @@
 
     <section id="home" class="hero-section">
         <div class="carousel-container">
-            <!-- Slide 1 -->
+            
         <div class="carousel-slide active">
     <img src="imgs\553583343_1537164564311901_4213418605729076097_n.png" alt="JaxTrail Technologies Services" class="slide-image">
     <div class="slide-overlay"></div>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             
-            <!-- Slide 2 -->
+            
             <div class="carousel-slide">
                 <img src="imgs\553594971_2179765835841214_2243412961524534459_n.png" alt="Tech Repairs" class="slide-image">
                 <div class="slide-overlay"></div>
@@ -66,7 +66,7 @@
                 </div>
             </div>
             
-            <!-- Slide 3 -->
+          
             <div class="carousel-slide">
                 <img src="imgs\553132608_1749816089000893_8886982879049755005_n.png" alt="Quality Service" class="slide-image">
                 <div class="slide-overlay"></div>
@@ -87,7 +87,7 @@
             </div>
         </div>
         
-        <!-- Carousel Navigation Dots -->
+       
         <div class="carousel-dots">
             <span class="dot active" data-slide="0"></span>
             <span class="dot" data-slide="1"></span>
@@ -254,17 +254,17 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Hero Carousel Handler
+            
             const heroSlides = document.querySelectorAll('.carousel-slide');
             const heroDots = document.querySelectorAll('.carousel-dots .dot');
             let currentHeroSlide = 0;
             
             function showHeroSlide(index) {
-                // Hide all slides
+               
                 heroSlides.forEach(slide => slide.classList.remove('active'));
                 heroDots.forEach(dot => dot.classList.remove('active'));
                 
-                // Show current slide
+               
                 heroSlides[index].classList.add('active');
                 heroDots[index].classList.add('active');
                 
@@ -276,20 +276,20 @@
                 showHeroSlide(nextIndex);
             }
             
-            // Auto-advance hero carousel every 5 seconds
+            
             setInterval(nextHeroSlide, 5000);
             
-            // Dot navigation for hero carousel
+           
             heroDots.forEach((dot, index) => {
                 dot.addEventListener('click', () => {
                     showHeroSlide(index);
                 });
             });
             
-            // Show the initial slide
+            
             showHeroSlide(currentHeroSlide);
             
-            // Basic Scroll Reveal Handler
+            
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -299,7 +299,7 @@
             }, { threshold: 0.1 });
             document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
             
-            // Testimonial Carousel Handler
+           
             const testimonialSlides = document.querySelectorAll('.testimonial-slide');
             const nextButton = document.querySelector('.carousel-button.next');
             const prevButton = document.querySelector('.carousel-button.prev');
@@ -324,13 +324,14 @@
                 showTestimonialSlide(currentTestimonialSlide);
             });
             
-            // Show the initial slide
+            
             showTestimonialSlide(currentTestimonialSlide);
         });
     </script>
 </body>
 
 </html>
+
 
 
 
