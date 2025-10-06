@@ -671,5 +671,40 @@ footer {
         height: 150px;
     }
 
+/* Hide nav links by default on mobile */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
+/* Show when active */
+.nav-links.active {
+  display: flex;
+}
+
+/* Show the toggle button only on mobile */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+  }
+}
+
+
 
