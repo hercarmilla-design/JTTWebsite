@@ -4,8 +4,8 @@
  * =====================================
  */
 .company-logo {
-    width: 80px;
-    height: 80px;
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
     margin: 0 auto 15px;
     background-color: #fff;
     border-radius: 50%;
@@ -14,17 +14,17 @@
     justify-content: center;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    padding: 5px;
+    padding: 5px; /* Adds some padding around the logo */
 }
 
 .logo-image {
     width: 105%;
     height: 105%;
-    object-fit: contain; 
+    object-fit: contain; /* This ensures the entire logo fits without cropping */
     border-radius: 50%;
 }
 
-
+/* Keep the existing company-icon-placeholder for other slides */
 .company-icon-placeholder {
     width: 80px;
     height: 80px;
@@ -52,7 +52,7 @@
     --transition-speed: 0.3s;
 }
 
-
+/* ADDED: Smooth scroll for navigation links */
 html {
     scroll-behavior: smooth; 
 }
@@ -87,7 +87,7 @@ h1, h2, h3, h4 {
     margin-bottom: 1rem;
 }
 
-
+/* Button Styles */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -168,7 +168,7 @@ h1, h2, h3, h4 {
 }
 
 .menu-toggle {
-    display: none;
+    display: none; /* Hide on desktop */
     font-size: 2rem;
     background: none;
     border: none;
@@ -239,7 +239,7 @@ h1, h2, h3, h4 {
     padding: 0 20px;
 }
 
-
+/* Company Icon Placeholder Styling */
 .company-icon-placeholder {
     width: 80px;
     height: 80px;
@@ -275,7 +275,7 @@ h1, h2, h3, h4 {
     margin: 0 10px;
 }
 
-
+/* Carousel Dots */
 .carousel-dots {
     position: absolute;
     bottom: 20px;
@@ -319,7 +319,7 @@ section {
     margin-bottom: 40px;
 }
 
-
+/* Scroll Reveal Styling */
 .scroll-reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -471,15 +471,15 @@ section {
     to { opacity: 1; }
 }
 
-
+/* UPDATED: SQUARE IMAGE FRAME FOR PROJECTS/REPAIRS */
 .testimonial-photo {
-    width: 250px; 
-    height: 250px; 
-    border-radius: 10px; 
+    width: 250px; /* Made larger */
+    height: 250px; /* Made larger */
+    border-radius: 10px; /* Changed from 50% (circle) to 10px (square/rounded rectangle) */
     margin: 0 auto 20px;
     overflow: hidden;
-    background-color: #ddd; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    background-color: #ddd; /* Placeholder background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Added a slight shadow */
 }
 
 .testimonial-photo img {
@@ -609,19 +609,19 @@ footer {
  * =====================================
  */
 
-
+/* Tablets and small desktops */
 @media (max-width: 992px) {
     .hero-content .title {
         font-size: 3rem;
     }
     .grid-2 {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* Stack about cards */
     }
     .services-grid {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for services */
     }
     .contact-info-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* Stack contact info */
     }
     .form-row {
         flex-direction: column;
@@ -632,13 +632,13 @@ footer {
     }
 }
 
-
-
+/* Mobile phones */
+@media (max-width: 576px) {
     .navbar {
         padding: 15px 10px;
     }
     .nav-links {
-        display: none; 
+        display: none; /* Hidden by default on mobile */
         flex-direction: column;
         width: 100%;
         position: absolute;
@@ -654,7 +654,7 @@ footer {
         border-bottom: 1px solid #eee;
     }
     .menu-toggle {
-        display: block; 
+        display: block; /* Show menu button on mobile */
     }
     .hero-content .title {
         font-size: 2rem;
@@ -663,49 +663,11 @@ footer {
         font-size: 1.2rem;
     }
     .services-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* Stack services */
     }
-  
+    /* Adjusted for mobile */
     .testimonial-photo {
         width: 150px;
         height: 150px;
     }
-
-/* Hide nav links by default on mobile */
-.nav-links {
-  display: none;
-  flex-direction: column;
-  background: #fff;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  width: 200px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-
-/* Show when active */
-.nav-links.active {
-  display: flex;
-}
-
-/* Show the toggle button only on mobile */
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-
-  .menu-toggle {
-    display: block;
-  }
-  .nav-links {
-    position: absolute;
-  }
-}
-
-
-
-
