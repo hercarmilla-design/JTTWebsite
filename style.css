@@ -610,6 +610,63 @@ a.btn-primary:visited {
   color: #ffffff;; /* or your original button text color */
 }
 
+/* Toggle button style */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: #222;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .theme-toggle {
+  color: #f5f5f5;
+}
+
+/* Smooth transition between light and dark mode */
+* {
+  transition: background-color 0.4s ease, color 0.4s ease, text-shadow 0.4s ease;
+}
+
+
+/* Dark mode colors */
+body.dark-mode {
+  background-color: #121212;
+  color: #272727;
+}
+
+body.dark-mode .logo {
+  color: #fff;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+body.dark-mode header,
+body.dark-mode nav {
+  background-color: #0a0a0a;
+}
+
+body.dark-mode a {
+  color: #cfcfcf;
+}
+
+body.dark-mode a:hover {
+  color: #ffffff;
+}
+
+/* Example for sections */
+body.dark-mode .hero,
+body.dark-mode section {
+  background-color: #181818;
+}
+
+body.dark-mode footer {
+  background-color: #101010;
+  color: #ccc;
+}
+
+
+
 
 /*
  * =====================================
@@ -730,3 +787,4 @@ a.btn-primary:visited {
 
 
 }
+
