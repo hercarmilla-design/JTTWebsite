@@ -253,6 +253,15 @@
     </footer>
     
     <script>
+
+        
+const navLinksAll = document.querySelectorAll('.nav-links a');
+
+navLinksAll.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinksAll.forEach(l => l.classList.remove('active')); 
+    link.classList.add('active'); 
+ 
        
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
@@ -338,6 +347,7 @@ menuToggle.addEventListener('click', () => {
 </body>
 
 </html>
+
 
 
 
