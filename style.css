@@ -350,7 +350,7 @@ section {
 .about-card {
     background-color: var(--color-text-light);
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 4px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
@@ -411,7 +411,7 @@ section {
 .service-item {
     background-color: var(--color-text-light);
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 }
@@ -514,7 +514,7 @@ section {
     padding: 10px 15px;
     cursor: pointer;
     z-index: 10;
-    border-radius: 5px;
+    border-radius: 3px;
     transition: background-color 0.2s;
 }
 
@@ -544,7 +544,7 @@ section {
 
 .contact-info-grid div {
     padding: 30px 20px;
-    border-radius: 10px;
+    border-radius: 4px;
     background-color: #f0f4f7;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -652,6 +652,27 @@ body.dark-mode a {
 
 body.dark-mode a:hover {
   color: #ffffff;
+}
+
+/* Boxes on dark mode */
+body.dark-mode .about-section,
+body.dark-mode .about-card,
+body.dark-mode .service-item,
+body.dark-mode .contact-info-grid div {
+  background-color: #1f1f1f;
+  color: #7c7c7c;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .about-section h3,
+body.dark-mode .about-card h3,
+body.dark-mode .service-item h3,
+body.dark-mode .contact-info-grid div h3 {
+  color: #707070;
+}
+
+body.dark-mode {
+  --color-dark: #707070;
 }
 
 /* Example for sections */
