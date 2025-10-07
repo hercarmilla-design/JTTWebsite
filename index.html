@@ -14,7 +14,10 @@
 
     <header class="header">
         <div class="container navbar">
-            <h1 class="logo">JaxTrail Technologies</h1>
+            <div class="logo">
+  <img src="imgs\image-removebg-hicon.png" alt="JaxTrail Logo" class="logo-icon">
+  <h1>JaxTrail Technologies</h1>
+</div>
             <nav class="nav-links">
                 <button id="theme-toggle" class="theme-toggle">
                 <i class="fas fa-moon"></i></button>
@@ -250,6 +253,14 @@
                 </div>
             </div>
         </div>
+        <div class="contact-box developer-box">
+  <img src="imgs\ss.png" alt="Developer Photo" class="developer-photo">
+  <h3>About the Website Developer</h3>
+           <p>Hello! I am Ian Alagdon, the developer of JaxTrail Technologies Website.</p>
+           <p>I am a 2nd-year college student beginner coder</p>
+           <p>Thank you for checking out our website!</p>
+</div>
+
     </section>
 
     <footer>
@@ -269,7 +280,7 @@ navLinksAll.forEach(link => {
   });
 });
 
-
+    document.body.classList.add('dark-mode');
   const toggle = document.getElementById('theme-toggle');
   const icon = toggle.querySelector('i');
 
