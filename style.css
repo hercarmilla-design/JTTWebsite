@@ -17,6 +17,7 @@
     padding: 5px; /* Adds some padding around the logo */
 }
 
+
 .logo-image {
     width: 105%;
     height: 105%;
@@ -452,7 +453,7 @@ section {
     max-width: 700px;
     margin: 40px auto 0;
     overflow: hidden;
-    padding: 80px;
+    padding: 40px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
 }
@@ -595,6 +596,24 @@ section {
     font-weight: 500;
 }
 
+.developer-box {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.developer-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #007bff;
+}
+
 footer {
     background-color: var(--color-dark);
     color: #adb5bd;
@@ -646,6 +665,30 @@ body.dark-mode nav {
   background-color: #0a0a0a;
 }
 
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode li,
+body.dark-mode a {
+  color: #ffffff;
+}
+
+/* specifically target those shades */
+body.dark-mode [style*="color:#707070"],
+body.dark-mode [style*="color:#7c7c7c"],
+body.dark-mode [style*="color:#6c757d"],
+body.dark-mode [style*="color:#555555"],
+body.dark-mode [style*="color:#4e4d4d"],
+body.dark-mode p.story.placeholder {
+  color: #ffffff !important;
+}
+
+
 body.dark-mode a {
   color: #cfcfcf;
 }
@@ -681,13 +724,64 @@ body.dark-mode section {
   background-color: #181818;
 }
 
+body.dark-mode i.fas,
+body.dark-mode i.fa,
+body.dark-mode i.fab,
+body-dark-mode i.far {
+  color: #ffffff !important;
+}
+
 body.dark-mode footer {
   background-color: #101010;
   color: #ccc;
 }
 
+/* Dark mode version */
+body.dark-mode .developer-box {
+  background-color: #1e1e1e;
+  color: #eaeaea;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
 
+body.dark-mode .developer-photo {
+  border-color: #ffffff;
+}
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* Dark mode glow for text */
+body.dark-mode .logo h1 {
+  color: #fff;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+/* Optional: logo image stays bright in dark mode */
+body.dark-mode .logo-icon {
+  filter: brightness(1.2);
+}
+
+.logo h1 {
+  font-size: 2rem; /* smaller header text */
+  margin: 0;
+}
+
+body.dark-mode .hero-section i,
+body.dark-mode .hero-content i,
+body.dark-mode .company-icon-placeholder i {
+  color: var(--color-primary) !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
 
 /*
  * =====================================
@@ -759,6 +853,12 @@ body.dark-mode footer {
     .nav-links a {
   position: relative;
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .developer-box {
+    margin-top: 1.5rem;
+  }
 }
 
 .nav-links a.active::after {
