@@ -422,12 +422,12 @@ section {
 
 .testimonial-carousel {
     position: relative;
-    max-width: 700px;
-    margin: 40px auto 0;
+    max-width: 600px;
+    margin: 30px auto 0;
     overflow: hidden;
-    padding: 40px;
+    padding: 30px;
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 .testimonial-slide {
@@ -880,6 +880,7 @@ body.dark-mode .company-icon-placeholder i {
 
 
 }
+
 
 
 
