@@ -191,7 +191,7 @@ h1, h2, h3, h4 {
 .carousel-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .carousel-slide {
@@ -880,5 +880,6 @@ body.dark-mode .company-icon-placeholder i {
 
 
 }
+
 
 
