@@ -69,20 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show the initial slide
     showHeroSlide(currentHeroSlide);
     
-    // Enhanced Scroll Reveal Handler - Reset when leaving viewport
+    // Scroll Reveal - replay on every scroll in/out
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-        } else {
-            // Remove class when element leaves viewport to reset animation
-            entry.target.classList.remove('revealed');
-        }
-    });
-}, { 
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px' // Triggers when 50px from bottom
-});
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+    } else {
+      entry.target.classList.remove('revealed'); // remove when leaving view
+    }
+  });
+}, { threshold: 0.2 });
 
 document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
     
@@ -115,4 +111,5 @@ document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
     showTestimonialSlide(currentTestimonialSlide);
 
 });
+
 
