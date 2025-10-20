@@ -629,7 +629,7 @@ body.dark-mode {
 
 body.dark-mode .logo {
   color: #fff;
-    text-shadow: 0 0 3px #ffffff, 0 0 6px #ffffff;
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
 body.dark-mode header,
@@ -734,7 +734,7 @@ body.dark-mode .developer-photo {
 
 body.dark-mode .logo h1 {
   color: #fff;
-    text-shadow: 0 0 3px #ffffff, 0 0 6px #ffffff;
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
 
@@ -880,6 +880,7 @@ body.dark-mode .company-icon-placeholder i {
 
 
 }
+
 
 
 
