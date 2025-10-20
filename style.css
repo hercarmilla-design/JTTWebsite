@@ -734,7 +734,7 @@ body.dark-mode .developer-photo {
 
 body.dark-mode .logo h1 {
   color: #fff;
-  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
 }
 
 
@@ -880,6 +880,7 @@ body.dark-mode .company-icon-placeholder i {
 
 
 }
+
 
 
 
