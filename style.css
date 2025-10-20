@@ -629,7 +629,6 @@ body.dark-mode {
 
 body.dark-mode .logo {
   color: #fff;
-  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
 }
 
 body.dark-mode header,
@@ -879,6 +878,7 @@ body.dark-mode .company-icon-placeholder i {
 
 
 }
+
 
 
 
