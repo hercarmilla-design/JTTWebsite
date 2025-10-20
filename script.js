@@ -69,15 +69,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show the initial slide
     showHeroSlide(currentHeroSlide);
     
-    // Basic Scroll Reveal Handler
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
+    // Enhanced Scroll Reveal Handler - Resets every time
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Remove and re-add the revealed class to restart animation
+            entry.target.classList.remove('revealed');
+            // Small timeout to ensure the class removal is processed
+            setTimeout(() => {
                 entry.target.classList.add('revealed');
-            }
-        });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+            }, 10);
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
     
     // Testimonial Carousel Handler
     const testimonialSlides = document.querySelectorAll('.testimonial-slide');
@@ -106,4 +112,5 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Show the initial slide
     showTestimonialSlide(currentTestimonialSlide);
+
 });
